@@ -1,0 +1,57 @@
+/* pages/signup/signup.wxss */
+.title, .intro{
+  text-align: center;
+}
+.intro{
+  margin-top: 80rpx;
+  font-size: 25rpx;
+  color: rgb(120, 120, 120);
+}
+
+.form_{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nickname_box,.mail_box,.check_box,.phone_box,.pass_box,.button_box{
+  margin-top: 50rpx;
+  background-color: #F2F2F2;
+  width: 600rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.weui-input{
+  
+  width: 550rpx;
+}
+.check_box{
+  
+  background-color: rgb(221, 176, 198);
+  height: 70rpx;
+  background-color:#FCF0F2;
+  font-size: 30rpx;
+}
+
+
+
+.button_box{
+  margin-top: 80rpx;
+  background-color: white;
+}
+.button_box_cont{
+  size: inherit;
+  width: 600rpx;
+  height: 80rpx;
+  background-color: #E50834;
+  font-size:30rpx;
+  color: white;
+  
+  width: 550rpx;
+}
+
+  

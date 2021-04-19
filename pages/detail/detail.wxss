@@ -1,0 +1,150 @@
+/* pages/detail/detail.wxss */
+
+.toolbox{
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: space-between;
+
+}
+.like_button{
+  margin-left: 50rpx;
+}
+.right_three{
+  
+  width: 310rpx;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.toolbox image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.toolbox button{
+  width: 70rpx;
+}
+
+.cat_pic{
+  width: 750rpx;
+}
+
+
+.image_info{
+  margin-bottom: 10rpx;
+}
+.image_description_text{
+  padding: 30rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  font-family: fantasy;
+  
+}
+.image_thumbsup{
+  padding: 20rpx;
+  margin-left: 30rpx;
+}
+.image_thumbsup image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+}
+.image_thumbsup text{
+  font-size: 25rpx;
+  color: rgb(180,180,180);
+}
+.fav_number{
+  margin-right: 50rpx;
+}
+
+
+.publisher{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15rpx;
+}
+.publisher_image image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+.publisher_name{
+  padding-top: 10rpx;
+}
+.album_image image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10%;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+
+.add_comment{
+  margin-left: 20rpx;
+  height: 60rpx;
+  width: 710rpx;
+  padding-top: 10rpx;padding-left: 10rpx;
+  background-color: rgb(233,233,233);
+  border-radius: 10rpx;
+  margin-bottom: 30rpx;
+  color: rgb(180,180,180);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.two_scrolls{
+  background-color: rgb(233, 233, 233);
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.scroll_area{
+  
+  
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.tile{
+  background-color: white;
+  width: 345rpx;
+  border-radius: 7rpx;
+  margin-bottom: 20rpx;
+  
+}
+.tile_image{
+  
+  width: 345rpx;
+}
+.image_image{
+  border-top-left-radius: 7rpx;
+  border-top-right-radius: 7rpx;
+  width: 345rpx;
+}
+.image_info{
+  margin-bottom: 10rpx;
+}
+.image_description_text{
+  padding: 20rpx;
+  font-size: 25rpx;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}

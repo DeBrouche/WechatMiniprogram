@@ -1,0 +1,6 @@
+<!--pages/upload/upload.wxml-->
+<text>pages/upload/upload.wxml</text>
+
+
+
+<view  bindtap="onclick_upload">click here to upload</view>

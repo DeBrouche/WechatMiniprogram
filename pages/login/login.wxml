@@ -1,0 +1,37 @@
+<!--pages/login/login.wxml-->
+<view class="title">
+  <text class="signup">登录</text>
+</view>
+<view class="intro">
+  <text>CatMe 账号登录</text>
+</view>
+<view >
+  <form class="form_" bindsubmit="formSubmit">
+    <view class="id_box">
+      <input class="weui-input"  name="account" placeholder="手机号/邮箱/ID"/>
+    
+    </view>
+    <view class="key_box">
+      <input class="weui-input"  password ="true"name="password" placeholder="密码"/>
+    
+    </view>
+    <view class="check_box">
+      <checkbox class="checkbox_cont" name ="consent">我保证不举报小程序及作者! :D</checkbox>
+    </view>
+    <view class="button_box" >
+      <button style=" width: 600rpx;  height: 80rpx; background-color: #E50834;" class="button" form-type="submit">登录</button>
+    </view>
+  </form>
+</view>
+<view class="jump_box">
+  <view class="forgot_signup_box">
+    <text>忘记密码？</text>
+    <text>手机注册</text>
+  </view>
+</view>
+<view class="intro">
+  <text>第三方登录</text>
+</view>
+<view>
+  
+</view>

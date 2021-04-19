@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="">
+
+    <title>Welcome! Please login!</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        body
+        {
+            background-color: powderblue;
+            padding: 0px;
+            margin: 0px;
+
+        }
+        #login-box
+        {
+            background-color: lightgoldenrodyellow;
+            width: 420px;
+            height: 300px;
+
+            border: 3px solid coral;
+            border-radius: 50px;
+
+            margin: 15% auto auto auto ;
+
+            padding: 60px;
+
+        }
+        .box-title
+        {
+            color: coral;
+            font-size: 30px;
+            width: 100%;
+            height: 48px;
+            margin: 1px 0 20px;
+            border-bottom: 1px solid lightslategray;
+
+            padding: 0;
+        }
+        .box-title h3
+        {
+
+        }
+        .input-box
+        {
+            margin-top: 12px   ;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+        }
+        .input-box input
+        {
+            font-size: 18px;
+            width: 340px;
+            height: 32px;
+            margin-left: 18px;
+            border: 1px solid darkolivegreen;
+            border-radius: 4px;
+            padding-left: 42px;
+        }
+        .input-box input::-webkit-input-placeholder{
+            font-size: 18px;
+        }
+        .input-box input:hover{
+            border: 1px solid #ff7d0a;
+        }
+        .input-box input:after{
+            border: 1px solid #ff7d0a;
+        }
+        .remember-box{
+            padding-left: 27%;
+            margin-top: 12px   ;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+
+
+        }
+        .remember-box input{
+            width: 18px;
+            height: 18px;
+            margin-top: 3px;
+            margin-left: 18px;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+
+
+        }
+
+        .remember-box p{
+            text-align: center;
+            margin-top: 0;
+            margin-left: 10px;
+            margin-bottom: 2px;
+            display: inline-block;
+            font-size: 22px;
+            border: 0;
+            color: black;
+
+        }
+        .login-button{
+
+            width: 100%;
+            margin:12px auto auto auto;
+            display: inline-block;
+        }
+        .login-button button{
+            background-color: #ff7d0a;
+            color: white;
+            font-size: 26px;
+            width: 220px;
+            height: 40px;
+            margin-left:90px;
+            border: 1px solid white;
+            border-radius: 4px;
+
+        }
+        .login-button button:hover{
+            background-color: #ff9d8a;
+        }
+        .login-button button:active{
+            background-color: #ff9d8a;
+
+        }
+        .icon{
+            width: 20px;
+            height: 20px;
+            margin: 8px 144px 55px 26px;
+            padding: 1px;
+
+            display: inline-block;
+            position: absolute;
+            border-right: 1px solid grey;
+
+        }
+
+        .icon-username{
+
+            background: url("./username.png")no-repeat;
+        }
+        .icon-password{
+
+            background: url("./password.png") no-repeat;
+        }
+        .login-links{
+            margin-top: 12px;
+            text-align: center;
+        }
+        .login-links a{
+            margin: 30px;
+            color: #4a4744;
+            font-size: 21px;
+            text-decoration: none;
+        }
+        .login-links a:hover{
+            color: #ff7d0a;
+        }
+        .login-links a:active{
+            color: #ee7204;
+        }
+    </style>
+</head>
+<body >
+<div id="login-box">
+    <div class ="box-title">
+        <h3>Please Login</h3>
+    </div>
+
+    <form>
+        <div class="input-box">
+            <span class="icon icon-username"></span>
+            <input type="text" placeholder="Enter your username here... ">
+        </div>
+
+        <div class="input-box">
+            <span class="icon icon-password"></span>
+            <input type="password" placeholder="Enter your password here... ">
+        </div>
+
+        <div class="remember-box">
+            <input id="checkbox" type="checkbox"><p>Remember me</p>
+        </div>
+
+
+
+        <div class="login-button">
+            <button>Login</button>
+        </div>
+
+    </form>
+
+    <div class ="login-links">
+        <a href="#">Forget Password</a><br>
+        <a href="#">Sign Up</a>
+    </div>
+
+</div>
+
+
+</body>
+</html>

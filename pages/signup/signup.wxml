@@ -1,0 +1,38 @@
+<!--pages/signup/signup.wxml-->
+<view class="title">
+  <text class="signup">注册</text>
+</view>
+<view class="intro">
+  <text>CatMe 账号注册</text>
+</view>
+<view >
+  <form class="form_" bindsubmit="formSubmit">
+    <view class="nickname_box">
+      <input name="nickname" class="weui-input" auto-focus placeholder="昵称"/>
+    
+    </view>
+    <view class="mail_box">
+      <input name="mail" class="weui-input" auto-focus placeholder="邮箱"/>
+    
+    </view>
+    <view class="phone_box">
+      <input name="phone" class="weui-input" auto-focus placeholder="手机号码"/>
+    
+    </view>
+    <view class="pass_box">
+      <input password="true" name="password" class="weui-input" auto-focus placeholder="密码"/>
+    
+    </view>
+    <view class="check_box">
+      <checkbox class="checkbox_cont">我保证不举报小程序及作者</checkbox>
+    </view>
+    <view class="button_box">
+      <button style="width:600rpx;" class="button_box_cont" form-type="submit">确定</button>
+    </view>
+  </form>
+</view>
+
+
+<view>
+  
+</view>

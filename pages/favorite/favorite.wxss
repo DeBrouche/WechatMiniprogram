@@ -1,0 +1,129 @@
+/* pages/update/update.wxss */
+.title{
+  text-align: center;
+}
+
+.two_scrolls{
+  background-color: rgb(233, 233, 233);
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.scroll_area{
+  
+  
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.tile{
+  background-color: white;
+  width: 345rpx;
+  border-radius: 7rpx;
+  margin-bottom: 20rpx;
+  
+}
+.tile_image{
+  
+  width: 345rpx;
+}
+.image_image{
+  border-top-left-radius: 7rpx;
+  border-top-right-radius: 7rpx;
+  width: 345rpx;
+}
+.image_info{
+  margin-bottom: 10rpx;
+}
+.image_description_text{
+  padding: 20rpx;
+  font-size: 25rpx;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+.image_thumbsup{
+  padding: 20rpx;}
+
+.image_thumbsup image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+}
+.image_thumbsup text{
+  font-size: 25rpx;
+  color: rgb(180,180,180);
+}
+.fav_number{
+  margin-right: 50rpx;
+}
+.publisher{
+  background-color: white;
+  width:325rpx;
+  height:100rpx;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.publisher_image image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  margin-right: 10rpx;
+}
+.publisher_name{
+  background-color: white;
+  width: 235rpx;
+  height: 40rpx;
+}
+.publisher_description{
+  background-color: white;
+  width: 235rpx;
+  height: 40rpx;
+}
+.publisher_name{
+  color: rgb(110,110,110);
+  font-size: 25rpx;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.publisher_description{
+  font-size: 30rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

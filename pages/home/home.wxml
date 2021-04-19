@@ -1,0 +1,301 @@
+<!--pages/home/home.wxml-->
+
+<navigator url="/pages/detail/detail">
+<!--  
+  <view class="slide">  
+    <swiper
+    indicator-dots="true"
+    autoplay="true">
+      <swiper-item>
+        <image class="swiper_image" src="/images/750x300-1.jpg" />
+      </swiper-item>
+
+      <swiper-item>
+        <image class="swiper_image" src="/images/750x300-2.jpg" />
+      </swiper-item>
+
+      <swiper-item>
+        <image class="swiper_image" src="/images/750x300-3.jpg" />
+      </swiper-item>
+    </swiper>
+  </view>
+l-->
+<!--
+  <view class="category">
+    
+              <view class="cat_box">
+                <view class="cat_pic"><image class="cat_pic" src="/images/1.png"></image></view>
+                
+                <view class="cat_text">tabby</view>
+              </view>
+    
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/2.png"></image></view>
+      
+      <view class="cat_text">light</view>
+    </view>
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/3.png"></image></view>
+      
+      <view class="cat_text">orange</view>
+    </view>
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/4.png"></image></view>
+      
+      <view class="cat_text">lynx</view>
+    </view>
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/5.png"></image></view>
+      
+      <view class="cat_text">angry</view>
+    </view>
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/6.png"></image></view>
+      
+      <view class="cat_text">mask</view>
+    </view>
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/7.png"></image></view>
+      
+      <view class="cat_text">woker</view>
+    </view>
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/8.png"></image></view>
+      
+      <view class="cat_text">kitty</view>
+    </view>
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/9.png"></image></view>
+      
+      <view class="cat_text">blue</view>
+    </view>
+    <view class="cat_box">
+      <view class="cat_pic"><image class="cat_pic" src="/images/10.png"></image></view>
+      
+      <view class="cat_text">mono</view>
+    </view>
+
+    
+  </view>
+l-->
+
+
+<view class="toolbox">
+  <view class="exit">
+    
+      <image class="exit_button" src="/icons/home (1).png"></image>
+    
+  </view>
+  <view class="right_three">
+    <view class="like">
+    
+      <image class="like_button" src="/icons/mine.png"></image>
+    
+    </view>
+    <view class="repost">
+      
+        <image class="repost_button" src="/icons/home.png"></image>
+      
+    </view>
+    <view class="collect">
+      
+        <image class="collect_button" src="/icons/upload.png"></image>
+    
+    </view>
+  </view>
+  
+  
+</view>
+<view class="two_scrolls">
+  <view class="scroll_area">
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(1).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+        
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(2).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(3).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(5).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(4).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(6).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(7).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="scroll_area">
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(8).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(9).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(10).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(11).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(12).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(13).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+    <view class="tile">
+      <view class="tile_image">
+        <image class="image_image" src="http://152.136.130.51:8080/fufu/fufu%20(14).jpg" mode='widthFix'></image>
+      </view>
+      <view class="image_info">
+        <view class="image_description">
+          <text class="image_description_text">Plansponsor:'Steps for</text>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<!--
+  <view class="items" style="white-space:pre" >
+    <block wx:for="{{tiles}}" wx:key="key">
+      <view class="item_box" >
+        <view class="item_text" >
+          <view class="cat_name">
+            <text> {{item.cat_name}}</text>
+          </view>
+          <view class="location">
+            <text> {{item.location}}</text>
+          </view>
+          <view class="age">
+            <text> {{item.age}}</text>
+          </view>
+        </view>
+        <view class="item_pic">
+          <image class="fufu_pic" src="{{item.pic}}"></image>
+        </view>   
+      </view>
+    </block>
+    
+  </view>
+l-->  
+</navigator>
+
+
+

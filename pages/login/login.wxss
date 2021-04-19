@@ -1,0 +1,62 @@
+/* pages/login/login.wxss */
+.title, .intro{
+  text-align: center;
+}
+.intro{
+  margin-top: 80rpx;
+  font-size: 25rpx;
+  color: rgb(120, 120, 120);
+}
+
+.form_{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.id_box,.key_box,.check_box,.button_box{
+  margin-top: 50rpx;
+  background-color: #F2F2F2;
+  width: 600rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.weui-input{
+  
+  width: 550rpx;
+}
+.check_box{
+  
+  background-color: rgb(221, 176, 198);
+  height: 70rpx;
+  background-color:#FCF0F2;
+  
+}
+.checkbox_cont{
+  background-color: #FCF0F2;
+  font-size:30rpx;
+  color: rgb(80, 80, 80);
+  width: 550rpx;
+}
+.button_box{
+  
+  margin-top: 50rpx;
+  background-color: #E50834;
+}
+.jump_box{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.forgot_signup_box{
+  background-color: white;
+  width: 600rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
