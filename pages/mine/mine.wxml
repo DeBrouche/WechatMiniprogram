@@ -1,22 +1,22 @@
 <!--pages/mine/mine.wxml-->
 <view class="top_buttons">
   <view class="top_button">
-    <image class="button_image" src="/icons/home.png"></image>
+    <image bindtap="logout" class="button_image" src="/icons/home.png"></image>
   </view>
   <view class="top_button">
-    <image class="button_image" src="/icons/mine.png"></image>
+    <image  bindtap="login" class="button_image" src="/icons/mine.png"></image>
   </view>
   <view class="top_button">
-    <image class="button_image" src="/icons/upload.png"></image>
+    <image   class="button_image" src="/icons/upload.png"></image>
   </view>
   
 </view>
   
 
-<view class="profile">
+<view  class="profile">
   
-  <view class="profile_photo">
-    <image class="profile_image" src="{{user.icon}}"></image>
+  <view   class="profile_photo">
+    <image bindtap="changeicon"  class="profile_image" src="{{user.icon}}"></image>
   </view>
   <view class="profile_text">
       <view class="nickname">

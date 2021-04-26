@@ -34,5 +34,8 @@
 
 
 <view>
-  
+  <view class="skip" style="margin-top:150rpx;">
+  <button bindtap="Exitlogin" style=" width: 480rpx;  height: 80rpx; background-color: #eeeeee;" class="button" form-type="submit">跳过注册，继续浏览
+  </button>
+</view>
 </view>

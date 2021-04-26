@@ -57,6 +57,14 @@ app.all('/', function(req, res, next) {
     next();
 });
 
+app.all('/app/uploadicon', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    res.header("X-Powered-By",' 3.2.1');
+    res.header("Content-Type", "application/json;charset=utf-8");
+    next();
+});
 
 
 
@@ -215,7 +223,7 @@ app.post('/app/login', (req, res) => {
 */
     //    let sql = `select * from user where openid='${openidresult.openid}'`;
 
-        let sql =`SELECT * FROM user WHERE nickname = '${account}' OR phone = '${account}' OR mail = '${account}' AND password ='${password}'`;
+        let sql =`SELECT * FROM user WHERE (nickname = '${account}' OR phone = '${account}' OR mail = '${account}') AND password ='${password}'`;
         console.log(sql)
         pool.getConnection(function(err, connection){
             connection.query(sql,function(err, rows){
@@ -418,8 +426,66 @@ app.post('/app/appget', function (req, res) {
  //   console.log(`Example app listening at http://152.136.130.51/:${port}`)
 //})
 
+//文件上传 头像
+app.post('/app/uploadicon', multipartMiddleware, function(req, resp) {
+    console.log('formata post request has bugunss_ receiving icon_______________________________________________________________________________________');
+    console.log('this is req.body:____________________',req.body,);
+    console.log('this is req.files____________________' ,req.files);
+    console.log('req.body req.files___________ended_____________________________________________' );
+
+    let Filename_Extension = req.files.file.type.substring(6);
+    let newfilename = req.body.newname +'.' + Filename_Extension;
+    let userid = req.body.user_id;
+    let sendback = {};
+    sendback.iconname =newfilename;
+
+    //resp.send(newfilename + " (size:"+req.files.file.size+") "+" had been uploaded  successfully!");
+
+
+    console.log('new image uploaded');
+    console.log('path: ');
+    console.log('/opt/CatMe/web/uploaded_images/icons/'+newfilename);
+    console.log('size: ');
+    console.log(req.files.file.size);
+    console.log('type: ');
+    console.log(req.files.file.type);
+
+    //console.log(req.files.file.path)
+    //移动临时文件
+    var source = fs.createReadStream(req.files.file.path);
+    var dest = fs.createWriteStream('/opt/CatMe/web/uploaded_images/icons/'+newfilename);
+
+    source.pipe(dest);
+    source.on('end', function() { fs.unlinkSync(req.files.file.path);});   //delete
+    source.on('error', function(err) {  });
+    console.log('icon uploaded________________________________________________________________________________________');
+    // don't forget to delete all req.files when done
+    console.log('starting Database update________________________________________________________________________________________');
+    //修改头像值 相应id
+    //let sql2 =`UPDATE user SET openid  = '${openid}' WHERE user.id = '${id}'`;
+    //UPDATE `user` SET `user_icon` = '${password}' WHERE `user`.`id` = '1';
+    let sql =`update user set user_icon = '${newfilename}' where user.id = '${userid}'`;
+    console.log(sql);
+    pool.getConnection(function(err, connection){
+        connection.query(sql,function(err, rows){
+            if(err) {
+                console.log('sql connection err:', err.message);
+                resp.send(err.message);
+            }else{
+                console.log("new icon name sent back__________________________________________________")
+                resp.send(sendback.iconname);
+                console.log("sendbaci: " + sendback)
+                console.log("new icon name sent back__________________________________________________")
+            }
+        });
+        connection.release();
+    });
+})
+
+
 //文件上传
-app.post('/app/formdata', multipartMiddleware, function(req, resp) {
+app.post('/app/uploadmedia', multipartMiddleware, function(req, resp) {
+    console.log('formata post request has bugunss________________________________________________________________________________________');
     console.log('this is req.body:',req.body,'this is req.files' ,req.files);
     let Filename_Extension = req.files.file.type.substring(6);
     let newfilename = req.body.newname +'.' + Filename_Extension;
@@ -440,10 +506,9 @@ app.post('/app/formdata', multipartMiddleware, function(req, resp) {
     source.pipe(dest);
     source.on('end', function() { fs.unlinkSync(req.files.file.path);});   //delete
     source.on('error', function(err) {  });
-
+    console.log('formata post request has finished________________________________________________________________________________________');
     // don't forget to delete all req.files when done
 })
-
 
 //2021
 

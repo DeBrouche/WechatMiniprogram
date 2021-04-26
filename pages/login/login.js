@@ -8,6 +8,10 @@ Page({
   data: {
     
   },
+  Exitlogin:function(event) {
+    console.log(event);
+    wx.switchTab({url:'../home/home'})//返回个人页面
+  },
   //表单提交
   formSubmit: function(e) {
     console.log("button pressed___________________________");

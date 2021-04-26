@@ -3,4 +3,9 @@
 
 
 
-<view  bindtap="onclick_upload">click here to upload</view>
+<view  bindtap="upload_image">click here to upload_image</view>
+<view>!</view>
+<view>!</view>
+<view>!</view>
+<view>!</view>
+<view  bindtap="upload_media">click here to upload_media</view>

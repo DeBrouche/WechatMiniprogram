@@ -1,43 +1,86 @@
 // pages/mine/mine.js
 const app = getApp();
+
+function checkopenidstatus(minepage){
+  if(app.globalData.user_status==0){
+    //openid未绑定到账号 转至登录页面
+    console.log("//openid未绑定到账号 转至登录页面")
+   wx.navigateTo({
+     url: '../login/login'　　// 页面 A
+   })
+  }else{
+    console.log("加载用户数据————————————————————————————————————————————————————————————————————————————")
+    minepage.setData(
+     
+     {
+       user:{
+         id:app.globalData.user_id,
+         icon:"https://www.catme.ren/user_icon/"+app.globalData.user_icon,
+         nickname:app.globalData.user_nickname ,
+         mail:app.globalData.user_mail ,
+         post:app.globalData.user_post,
+         fav:app.globalData.user_fav,
+         collect:app.globalData.user_collect,
+         followed:app.globalData.user_followed},
+       albums:[{},{},{},{},{},{},{},{},{}]
+     }
+   )
+   console.log(minepage.data.user);
+  }
+};
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-      user:{},
+      user:{icon:'https://www.catme.ren/user_icon/icon.jpeg',
+      nickname:'unlogged',
+      mail:'unlogged',
+      post:'-1',
+      fav:'-1',
+      collect:'-1',
+      followed:'-1'},
       albums:{}
   },
+  logout: function(){
+    app.globalData.user_status = 0;
+    this.setData(
+     
+      {
+        user:{
+          id:0,
+          icon:'https://www.catme.ren/user_icon/icon.jpeg',
+          nickname:'unlogged',
+          mail:'unlogged',
+          post:'-1',
+          fav:'-1',
+          collect:'-1',
+          followed:'-1'},
+          albums:{}
+      }
+    )
+  },
+  login: function(){
+    wx.navigateTo({
+      url: '../login/login'　　// 页面 A
+    })
 
+  },
+  changeicon:function(){
+    wx.navigateTo({
+      url: '../upload/upload'　　// 页面 A
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-   if(app.globalData.user_status==0){
-     //openid未绑定到账号 转至登录页面
-    wx.navigateTo({
-      url: '../login/login'　　// 页面 A
-    })
-   }else{
-     console.log("加载用户数据————————————————————————————————————————————————————————————————————————————")
-    this.setData(
-      
-      {
-        user:{
-          id:app.globalData.user_id,
-          icon:"https://www.catme.ren/user_icon/"+app.globalData.user_icon,
-          nickname:app.globalData.user_nickname ,
-          mail:app.globalData.user_mail ,
-          post:app.globalData.user_post,
-          fav:app.globalData.user_fav,
-          collect:app.globalData.user_collect,
-          followed:app.globalData.user_followed},
-        albums:[{},{},{},{},{},{},{},{},{}]
-      }
-    )
-    console.log(this.data.user);
-   }
+    let minepage = this;
+    checkopenidstatus(minepage);
+    
+   
     
     //console.log(this);
     
@@ -47,37 +90,15 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-
+    
   },
 
   /**
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    if(app.globalData.user_status==0){
-      //openid未绑定到账号 转至登录页面
-     wx.navigateTo({
-       url: '../login/login'　　// 页面 A
-     })
-    }else{
-      console.log("加载用户数据————————————————————————————————————————————————————————————————————————————")
-     this.setData(
-       
-       {
-         user:{
-           id:app.globalData.user_id,
-           icon:"https://www.catme.ren/user_icon/"+app.globalData.user_icon,
-           nickname:app.globalData.user_nickname ,
-           mail:app.globalData.user_mail ,
-           post:app.globalData.user_post,
-           fav:app.globalData.user_fav,
-           collect:app.globalData.user_collect,
-           followed:app.globalData.user_followed},
-         albums:[{},{},{},{},{},{},{},{},{}]
-       }
-     )
-     console.log(this.data.user);
-    }
+    let minepage = this;
+    checkopenidstatus(minepage);
   },
 
   /**
