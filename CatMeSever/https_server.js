@@ -509,6 +509,117 @@ app.post('/app/uploadmedia', multipartMiddleware, function(req, resp) {
     console.log('formata post request has finished________________________________________________________________________________________');
     // don't forget to delete all req.files when done
 })
+//创建相册
+app.post('/app/newalbum', (req, res) => {
+    console.log('sign_up 已经开始____________________________')
+    console.log(req.body) //查看请求的body里面的内容
+    let nickname = req.body.nickname;
+    let password = req.body.password;
+    let openid = req.body.openid;
+    let mail = req.body.mail;
+    let phone = req.body.phone;
+    let id =req.body.id;
+    console.log('above is the register infomation______________');
+    /*    var data = {
+            'appid': 'wx610399aa4ee6c316',
+            'secret': 'bdcbd7b19a1a8bfd2c81cc022858aade',
+            'js_code': req.body.code,
+            'grant_type': 'authorization_code'
+        };
+        console.log(data);
+        // querystring的stringify用于拼接查询
+        var content = querystring.stringify(data);
+        // 根据微信开发者文档给的API
+        var url = 'https://api.weixin.qq.com/sns/jscode2session?' + content;
+        // 对url发出一个get请求
+        request.get({
+            'url': url
+        }, (error, response, body) => {
+            // 将body的内容解析出来
+            let openidresult = JSON.parse(body);
+            console.log('the wx openid request sendback:')
+            //console.log(openidresult);
+            openidresult.code = req.body.code;
+            console.log(openidresult);
+    //ffff
+    */
+    //    let sql = `select * from user where openid='${openidresult.openid}'`;
+
+    let sql =`insert into user (id, openid, nickname, mail, phone, password, status, user_post, user_fav, user_collect, user_followed, user_icon) VALUES ('${id}', '${openid}', '${nickname}', '${mail}', '${phone}', '${password}', '1', '0', '0', '0', '0', 'icon.jpeg')`;
+    console.log(sql)
+    pool.getConnection(function(err, connection){
+        connection.query(sql,function(err, rows){
+            if(err) {
+                console.log('sql connection err:', err.message);
+                res.json(err.message);
+            }else{
+                if(rows.length ==0){//该账号没有注册成功 返回响应信息
+                    let result = {};
+                    result.status=0;
+                    console.log(req.body.nickname +' this account is not regisered')
+
+                    res.json(result);
+                    /*                        let sql = `insert into user(openid,status) values('${openidresult.openid}','0')`;
+                                            connection.query(sql, function (err, rows) {
+                                                if (err) {
+                                                    console.log('err:', err.message);
+                                                }else{
+                                                    console.log(rows);
+                                                    result.id=rows.insertId
+                                                    result.status =0
+                                                    result.userid =null
+                                                    result.jieguo ='written'
+                                                    console.log(result);
+                                                    res.json(result)
+                                                    //res.send('written')
+                                                }
+                                            });*/
+                }else{ //账号查找到，将openid更新至账号中，返回账号信息
+                    let result = {};
+                    console.log('this is row_______________________________________________________________________________________' + rows);
+
+                    result.status=1
+
+                    result.id=id;
+                    result.nickname=nickname;
+                    result.mail=mail;
+
+                    result.user_post=0;
+                    result.user_fav=0;
+                    result.user_collect=0;
+                    result.user_followed=0;
+
+                    result.user_icon='icon.jpeg';
+                    res.json(result);
+                    console.log('the sql register request sendback:')
+                    console.log(result);
+                    console.log('valid openid is:'+ openid);
+                    /*let sql2 =`UPDATE user SET openid  = '${openid}' WHERE user.id = '${id}'`;
+                    console.log('sql2 is: '+ sql2);
+                    connection.query(sql2, function (err, rows) {
+                        if (err) {
+                            console.log('err:', err.message);
+                        }else{
+                            console.log(rows);
+                            console.log('写入之后的rows__________________________________');
+                            console.log('id:'+id+'has been written a new openid '+openid);
+                            result.witten='yes';
+                            res.json(result);
+                            //res.send('written')
+                        }
+                    });*/
+                }
+            }
+        });
+        connection.release();
+    });
+//ffff
+
+    //console.log(result)
+    // 返回JSON格式数据
+    //res.json(result)
+
+})
 
 //2021
 

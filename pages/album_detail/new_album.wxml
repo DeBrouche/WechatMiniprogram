@@ -1,0 +1,41 @@
+<!--pages/album_detail/new_album.wxml-->
+<form class="form_" bindsubmit="formSubmit">
+  <view class="toolbox">
+    <navigator class="exit" delta="1" open-type="navigateBack">
+      <view class="exit">
+      
+      <image class="exit_button" src="/icons/home (1).png"></image>
+    
+      </view>
+    </navigator>
+    
+    <View class="middle">
+      <text>创建专辑</text>
+    </View>
+    <view class="right_three">
+      
+      <view class="collect">
+        <button style=" width: 100rpx;  height: 80rpx; background-color: white; border-radius: 0;" class="button" form-type="submit"><image class="collect_button" src="/icons/upload.png"></image></button>
+          
+      
+      </view>
+    </view>
+    
+    
+  </view>
+
+  <view class="submit_box"> 
+
+    <view class="name_box">
+      <input  class="name" name="album_name" placeholder="专辑标题"/>
+    </view>
+  
+
+    
+    <view class="descr_box">
+      描述
+      <input class="descr" name="album_description"placeholder="专辑描述"/>
+    </view>
+    
+  </view>
+</form>

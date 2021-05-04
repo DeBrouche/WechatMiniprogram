@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 .id_box,.key_box,.check_box,.button_box{
   margin-top: 50rpx;
@@ -30,23 +31,30 @@
   width: 550rpx;
 }
 .check_box{
-  
+  margin-left: 50rpx;
   background-color: rgb(221, 176, 198);
   height: 70rpx;
   background-color:#FCF0F2;
+  width: 500rpx;
   
 }
 .checkbox_cont{
   background-color: #FCF0F2;
   font-size:30rpx;
   color: rgb(80, 80, 80);
-  width: 550rpx;
+  
 }
 .button_box{
-  
-  margin-top: 50rpx;
+  width: 600rpx;
+  margin-top: 60rpx;
   background-color: #E50834;
 }
+.button_outer_box{
+display: flex;
+justify-content: center;
+}
+
+
 .jump_box{
   margin-top: 40rpx;
   display: flex;

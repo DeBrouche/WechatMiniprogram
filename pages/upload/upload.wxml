@@ -9,3 +9,52 @@
 <view>!</view>
 <view>!</view>
 <view  bindtap="upload_media">click here to upload_media</view>
+
+
+<view class="test">
+  <view class="a1">
+    
+      a1
+    
+  </view>
+  <view class="a2">
+    
+      a2
+    
+  </view>
+  <view class="a3">
+   
+      a3
+    
+  </view>
+  <view class="a4">
+    
+      a4
+    
+  </view>
+  <view class="a5">
+    
+      a5
+    
+  </view>
+</view>
+<view style="height:100rpx; background-color:pink; margin-bottom: 150rpx;">sdsad</view>
+
+
+<form class="form_">
+    
+      <input class="in1"  placeholder="in1"  />
+      <view class="in22">
+        <input class="in2"  placeholder="in2"  />
+      </view>
+      
+      <checkbox class="ch3">c3</checkbox>
+      <button class="bu4" style="width: 225rpx; background-color: rgb(107, 158, 218); border-radius:0;height:90rpx;">b4</button>
+      <input class="in5"  placeholder="in5"  />
+    
+    
+   
+  
+   
+
+</form>

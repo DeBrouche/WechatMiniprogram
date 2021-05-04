@@ -18,21 +18,27 @@
     <view class="check_box">
       <checkbox class="checkbox_cont" name ="consent">我保证不举报小程序及作者! :D</checkbox>
     </view>
-    <view class="button_box" >
-      <button style=" width: 600rpx;  height: 80rpx; background-color: #E50834;" class="button" form-type="submit">登录</button>
+    <view class="button_outer_box">
+      <view class="button_box" >
+        <button style=" width: 300rpx;  height: 80rpx; background-color: #E50834;" class="button" form-type="submit">登录</button>
     </view>
+    </view>
+    
   </form>
 </view>
 <view class="jump_box">
   <view class="forgot_signup_box">
     <text>忘记密码？</text>
-    <text>手机注册</text>
+    <navigator url="/pages/signup/signup">
+      <text>手机注册</text>
+    </navigator>
+    
   </view>
 </view>
 <view class="intro">
   <text>第三方登录</text>
 </view>
 <view class="skip" style="margin-top:150rpx;">
-  <button bindtap="Exitlogin" style=" width: 480rpx;  height: 80rpx; background-color: #eeeeee;" class="button" form-type="submit">跳过登录，继续浏览
+  <button bindtap="Exitlogin" style=" width: 500rpx;  height: 80rpx; background-color: #eeeeee;" class="button" form-type="submit">跳过登录，继续浏览
   </button>
 </view>

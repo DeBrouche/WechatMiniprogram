@@ -12,7 +12,10 @@
   display:flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
+  justify-items: center;
   align-items: center;
+
 }
 .nickname_box,.mail_box,.check_box,.phone_box,.pass_box,.button_box{
   margin-top: 50rpx;
@@ -30,11 +33,12 @@
   width: 550rpx;
 }
 .check_box{
-  
+  width: 500rpx;
   background-color: rgb(221, 176, 198);
   height: 70rpx;
   background-color:#FCF0F2;
   font-size: 30rpx;
+  margin-left: 50rpx;
 }
 
 
@@ -45,7 +49,7 @@
 }
 .button_box_cont{
   size: inherit;
-  width: 600rpx;
+  width:400rpx;
   height: 80rpx;
   background-color: #E50834;
   font-size:30rpx;

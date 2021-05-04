@@ -24,18 +24,21 @@
     
     </view>
     <view class="check_box">
-      <checkbox class="checkbox_cont">我保证不举报小程序及作者</checkbox>
+      <view>
+        <checkbox class="checkbox_cont">我保证不举报小程序及作者</checkbox>
+      </view>
+      
     </view>
     <view class="button_box">
-      <button style="width:600rpx;" class="button_box_cont" form-type="submit">确定</button>
+      <button style="width:500rpx;" class="button_box_cont" form-type="submit">确定</button>
     </view>
   </form>
 </view>
 
 
-<view>
-  <view class="skip" style="margin-top:150rpx;">
-  <button bindtap="Exitlogin" style=" width: 480rpx;  height: 80rpx; background-color: #eeeeee;" class="button" form-type="submit">跳过注册，继续浏览
-  </button>
-</view>
-</view>
+  <view>
+    <view class="skip" style="margin-top:150rpx;">
+      <button bindtap="Exitlogin" style=" width: 480rpx;  height: 80rpx; background-color: #eeeeee;" class="button" form-type="submit">跳过注册，继续浏览
+      </button>
+    </view>
+  </view>

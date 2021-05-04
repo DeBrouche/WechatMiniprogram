@@ -1,0 +1,62 @@
+/* pages/album_detail/new_album.wxss */
+.toolbox{
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: space-between;
+
+}
+.exit{
+  width: 40%;
+}
+.middle{
+  width: 20%;
+  font-size: larger;
+  font-weight: 400;
+}
+.like_button{
+  margin-left: 50rpx;
+}
+.right_three{
+  
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.toolbox image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.toolbox button{
+  width: 70rpx;
+}
+
+.submit_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+.name{
+  margin-top: 90rpx;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+  width: 650rpx;
+  height: 100rpx;
+  background-color: #eeeeee;
+}
+.descr_box{
+  font-size: larger;
+  margin-top: 90rpx;
+}
+.descr{
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+  width: 650rpx;
+  height: 250rpx;
+  background-color: #eeeeee;
+}

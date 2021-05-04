@@ -1,1 +1,81 @@
 /* pages/upload/upload.wxss */
+.test{
+  background-color: rgb(233, 187, 235);
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  
+  align-items: center;
+ 
+}
+
+
+.a1,.a2,.a3,.a4,.a5{
+  height:90rpx;
+  width: 90%;
+}
+.a1{
+  background-color: khaki;
+  width: 90%rpx;
+}
+.a2{
+  width: 30%;
+  background-color: rgb(105, 196, 125);
+}
+.a3{
+  width: 30%;
+  background-color: rgb(199, 214, 132);
+}
+.a4{
+  width: 30%;
+  background-color: rgb(107, 158, 218);
+}
+.a5{
+  width: 30%;
+  background-color: rgb(138, 109, 218);
+}
+
+
+.form_{
+  background-color: rgb(233, 187, 235);
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  
+  align-items: center;
+}
+
+.in1{
+  background-color: khaki;
+  width: 675rpx;
+  height:90rpx;
+}
+.in2{
+  width: 225rpx;
+  background-color: rgb(105, 196, 125);
+  height:90rpx;
+  margin-left: 225rpx;
+}
+.ch3{
+  width: 225rpx;
+  background-color: rgb(199, 214, 132);
+  height:90rpx;
+  margin-left: 225rpx;
+}
+.bu4{
+  width: 225rpx;
+  background-color: rgb(107, 158, 218);
+  height:90rpx;
+}
+.in5{
+  background-color: rgb(138, 109, 218);
+  width: 225rpx;
+  height:90rpx;
+  margin-left: 225rpx;
+}
