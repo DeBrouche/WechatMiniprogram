@@ -149,3 +149,11 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   
 }
+.new{
+  background-color: rgb(140, 206, 203);
+  width: 750rpx;
+  height: 100rpx;
+  font-size: 80rpx;
+  margin-bottom: 0rpx;
+  border-radius: 10rpx;
+}

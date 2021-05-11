@@ -24,7 +24,7 @@ Page({
           console.log(app.globalData.user_icon+'-----current icon');
           console.log(app.globalData.user_id+'current id');
           wx.uploadFile({
-            url: 'https://catme.ren/app/uploadicon',  //仅为示例，非真实的接口地址 
+            url: 'https://catme.ren/app/upload_posts',  //仅为示例，非真实的接口地址 
             
             filePath: tempFilePaths[i],
             

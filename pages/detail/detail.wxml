@@ -28,7 +28,7 @@
 
 
 <view class="cat_pic">
-  <image class="cat_pic" src="/images/WeChat Image_20201118171644.jpg" mode='widthFix'></image>
+  <image class="cat_pic" src="{{picurl}}" mode='widthFix'></image>
 </view>
 <view class="image_info">
         <view class="image_description">
@@ -62,7 +62,7 @@
 </view>
 <view>
   <view class="add_comment">
-  添加评论...
+  仅供浏览
   </view>
 </view>
 

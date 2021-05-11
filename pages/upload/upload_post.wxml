@@ -1,0 +1,2 @@
+<!--pages/upload/upload_post.wxml-->
+<view class="new" bindtapclass="new" bindtap="new_post">new post</view>

@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
 
-<navigator url="/pages/detail/detail">
+<navigator url="/pages/detail/detail?picurl=https://www.catme.ren/posts_pic/1620650310000_ordinal_2.jpeg">
 <!--  
   <view class="slide">  
     <swiper

@@ -1,4 +1,5 @@
 // pages/album_detail/new_album.js
+const app = getApp();
 Page({
 
   /**
@@ -9,42 +10,36 @@ Page({
   },
    //表单提交
    formSubmit: function(e) {
-    console.log("button pressed___________________________");
+    console.log("fom submit button pressed___________________________");
     console.log(this.data);
     console.log('form发生了submit事件，携带数据为：', e.detail);
-    
-    let logininfo = {
-      account:e.detail.value.account,
-      password:e.detail.value.password
+    let timestamp = Date.parse(new Date())/1000;
+    let user_id = app.globalData.user_id;
+    let album_info = {
+      album_name:e.detail.value.album_name,
+      album_description:e.detail.value.album_description,
+      album_id: timestamp,
+      user_id: user_id
     }
     wx.request({
-      url: 'https://catme.ren/app/login', 
+      //url: 'https://catme.ren/app/login', 
+      url:'https://catme.ren/app/new_album', 
       method:'POST',
       data: {
-        'account': logininfo.account,
-        'password':logininfo.password,
-        'openid':  app.globalData.user_openid
+        'id':album_info.album_id,
+        'name': album_info.album_name,
+        'description':album_info.album_description,
+        'user_id':  album_info.user_id
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success (res) {
         
-        if(res.data.status == 1){ //account已注册，查找到信息
+        if(res.data.status == 1){ //创建成功
+          console.log("album_created:_____________________________________________________")
           console.log(res.data)
-          
-          app.globalData.user_status = 1;
-          
-          app.globalData.user_id = res.data.id;
-          app.globalData.user_nickname = res.data.nickname;
-          app.globalData.user_mail = res.data.mail;
-          app.globalData.user_post = res.data.user_post;
-          app.globalData.user_fav = res.data.user_fav;
-          app.globalData.user_collect = res.data.user_collect;
-          app.globalData.user_followed = res.data.user_followed;
-          app.globalData.user_icon = res.data.user_icon;
-          console.log('global data written!!____________________-')
-          console.log(app.globalData)
+
           wx.switchTab({url:'../mine/mine'})//返回个人页面
           //wx.navigateTo({
           //  url: '../mine/mine'　　// 页面 A

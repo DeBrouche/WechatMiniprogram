@@ -84,45 +84,47 @@
     
   </view>
 
-<navigator url="/pages/album_detail/album_detail">
-  <view class="albums">
-    <block wx:for="{{albums}}" wx:key="key">
-      <view class="album">
-      
-        <view class="thumbnail">
-          <view class="left_thumbnail">
-            <image class="left_thumbnail_image" src="http://152.136.130.51:8080/20201029223812.jpg"></image>
-          </view>
-          <view class="right_thumbnail">
-            <view class="thumbnail_top_right">
-              <image class="thumbnail_top_right_image" src="http://152.136.130.51:8080/green.jpg"></image>
-            </view>
-            <view class="thumbnail_bottom_right">
-              <image class="thumbnail_bottom_right_image" src="http://152.136.130.51:8080/orange.jpg"></image>
-            </view>
-            
-          </view>     
-        </view>
-        <view class="album_header">
-          <text class="header_text">夫夫头像</text>
-        </view>
-        <view class="album_manage">
-          <view class="pic_number">
-            <text class="pic_number_text">6</text>
-          </view>
-          <view class="edit">
-            <text class="edit_text">编辑</text>
-          </view>
+  
+    <view class="albums">
+      <block wx:for="{{albums}}" wx:key="key">
+        <navigator url="/pages/album_detail/album_detail?albumid={{item.id}}&albumname={{item.name}}&albumdes={{item.description}}&albumowner={{item.owner_id}}">
+          <view class="album">
           
-        </view>
-      </view>
-    </block>
-    
+            <view class="thumbnail">
+              <view class="left_thumbnail">
+                <image class="left_thumbnail_image" src="{{item.thumnail_1}}"></image>
+              </view>
+              <view class="right_thumbnail">
+                <view class="thumbnail_top_right">
+                  <image class="thumbnail_top_right_image" src="{{item.thumnail_2}}"></image>
+                </view>
+                <view class="thumbnail_bottom_right">
+                  <image class="thumbnail_bottom_right_image" src="{{item.thumnail_3}}"></image>
+                </view>
+                
+              </view>     
+            </view>
+            <view class="album_header">
+              <text class="header_text">{{item.name}}</text>
+            </view>
+            <view class="album_manage">
+              <view class="pic_number">
+                <text class="pic_number_text">{{item.posts_amount}}</text>
+              </view>
+              <view class="edit">
+                <text class="edit_text">编辑</text>
+              </view>
+              
+            </view>
+          </view>
+        </navigator>
+      </block>
+      
 
-    
+      
 
-  </view>
-</navigator>
+    </view>
+  
 </view>
 
 

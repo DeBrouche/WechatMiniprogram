@@ -1,23 +1,17 @@
-// pages/detail/detail.js
-
+// pages/upload/upload_post.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    picurl:"",
+
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log("picurl: "+options.picurl);
-    this.setData({
-      picurl:options.picurl,
-    });
-
 
   },
 
