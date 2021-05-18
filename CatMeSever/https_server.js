@@ -838,6 +838,65 @@ app.post('/app/load_album_posts', (req, res) => {
     });
     console.log('the album posts request finishing____________________________________________________')
 })
+
+
+//加载主页 加载主页照片
+
+app.post('/app/load_home', (req, res) => {
+    console.log('load_home starting ________________________________________________-__________________________')
+    console.log('load_home starting ________________________________________________-__________________________')
+    console.log(req.body) //查看请求的body里面的内容
+    console.log('above is the load home infomation__');
+
+
+    let sql =`SELECT * FROM album_posts ORDER BY album_posts.id DESC`;
+    console.log(sql)
+    pool.getConnection(function(err, connection){
+        connection.query(sql,function(err, rows){
+            if(err) {
+                console.log('sql connection err:', err.message);
+                res.json(err.message);
+            }else{
+                if(rows.length ==0){//album没有存入数据库 返回响应信息
+                    let result = {};
+                    result.status=0;
+                    console.log('album( ' + albumid + ') has no posts')
+
+                    res.json(result);
+
+                }else{ //album信息写入成功，返回账号信息
+                    let result = {};
+                    console.log('home posts are as follows ' + rows);
+                    result.status=1
+                    result.posts_even = []
+                    result.posts_odd = []
+
+
+                    //分别为 单双栏的posts 数组赋值
+                    let length = rows.length;
+                    for(let i = 0; i < length ; i++){
+                        let evenoddIndex = i / 2;
+
+                        if(i%2 == 0){
+                            result.posts_even[evenoddIndex] = "https://www.catme.ren/posts_pic/" + rows[i].id;
+                        }else {
+                            evenoddIndex -= 0.5
+                            result.posts_odd[evenoddIndex] = "https://www.catme.ren/posts_pic/" + rows[i].id;
+                        }
+                    }
+                    res.json(result);
+                    console.log('the album posts request sendback:');
+                    console.log(result);
+                    console.log('home posts request is handled ');
+                    console.log('the album posts request finishing____________________________________________________');
+
+                }
+            }
+        });
+        connection.release();
+    });
+
+})
 //2021
 
 //配置服务端口80 443

@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/album_detail/album_detail",
+    
+    
+    
+    "pages/mine/mine",
+    "pages/album_detail/new_album",
+    
+    "pages/upload/upload",
+    "pages/login/login",
+    "pages/signup/signup",
+    "pages/detail/detail",
+    "pages/favorite/favorite",
+    "pages/upload/upload_post"
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "skyblue",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "iconPath": "/icons/mine.png",
+        "selectedIconPath": "/icons/mine (1).png",
+        "pagePath": "pages/mine/mine",
+        "text": "mine"
+      },
+      {
+        "iconPath": "/icons/home.png",
+        "selectedIconPath": "/icons/home (1).png",
+        "pagePath": "pages/home/home",
+        "text": "home"
+      },
+      {
+        "iconPath": "/icons/upload.png",
+        "selectedIconPath": "/icons/upload (1).png",
+        "pagePath": "pages/favorite/favorite",
+        "text": "favorites"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "CatMe",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
