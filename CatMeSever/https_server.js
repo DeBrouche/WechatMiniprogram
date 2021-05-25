@@ -84,7 +84,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.sendFile(
     __dirname + '/web/index.html')
-    console.log('catme.ren    sent back___________________________________________________________________')
+    console.log('catme.ren/    sent back___________________________________________________________________')
 })
 
 app.get('/:url', (req, res) => {
@@ -191,6 +191,8 @@ app.post('/app/getopenid', (req, res) => {
                         console.log('the sql openid request sendback:')
                         console.log(openidresult);
                         res.json(openidresult);
+                        console.log('get opendi finishing____________________________________________________________________________________')
+
                     }
                 }
             });
@@ -202,8 +204,7 @@ app.post('/app/getopenid', (req, res) => {
         // 返回JSON格式数据
         //res.json(result)
     })
-    console.log('get opendi finishing____________________________________________________________________________________')
-})
+    })
 
 
 //app 登录账号，将openid写入账号 并返回全局数据 用户登录
@@ -300,6 +301,8 @@ app.post('/app/login', (req, res) => {
                                 result.witten='yes';
                                 res.json(result);
                                 //res.send('written')
+                                console.log('login finishing___________________________________________________________________________________________')
+
                             }
                         });
                     }
@@ -312,8 +315,7 @@ app.post('/app/login', (req, res) => {
         //console.log(result)
         // 返回JSON格式数据
         //res.json(result)
-    console.log('login finishing___________________________________________________________________________________________')
-})
+    })
 //小程序注册 用户注册
 app.post('/app/sign_up', (req, res) => {
     console.log('sign_up starting________________________________________________________________________________________________')
@@ -399,6 +401,7 @@ app.post('/app/sign_up', (req, res) => {
                     console.log('the sql register request sendback:')
                     console.log(result);
                     console.log('valid openid is:'+ openid);
+                    console.log('sign_up finishing_____________________________________________________________________________')
                     /*let sql2 =`UPDATE user SET openid  = '${openid}' WHERE user.id = '${id}'`;
                     console.log('sql2 is: '+ sql2);
                     connection.query(sql2, function (err, rows) {
@@ -423,7 +426,7 @@ app.post('/app/sign_up', (req, res) => {
     //console.log(result)
     // 返回JSON格式数据
     //res.json(result)
-    console.log('sign_up finishing_______________________________________________________________________________________________')
+
 })
 
 //获取用户相册信息 获取用户相册数组
@@ -460,14 +463,15 @@ app.post('/app/get_albums', (req, res) => {
 
 
 
-                        console.log('sending back result' + result)
+                        console.log('sending back albums result' + result)
                         res.json(result);
+                        console.log('get albums info finishing_____________________________________________________________________________：')
                     }
                 }
         })
         connection.release();
     })
-    console.log('get albums info finishing_____________________________________________________________________________：')
+
 })
 
 
@@ -533,12 +537,13 @@ app.post('/app/upload_posts', multipartMiddleware, function(req, resp) {
                 resp.send(sendback.iconname);
                 console.log("sendbaci: " + sendback)
                 console.log("new icon name sent back__")
+                console.log("new icon finishing____________________________________________________________________________________________")
+
             }
         });
         connection.release();
     });
-    console.log("new icon finishing____________________________________________________________________________________________")
-})
+    })
 
 
 //文件上传 上传照片 上传posts
@@ -717,14 +722,14 @@ app.post('/app/uploadposts', multipartMiddleware, function(req, resp) {
 
                 console.log("new post name sent back__")
                 resp.send(sendback.postname);
+                console.log("uploading post finishing_____________________________________________________________________________")
 
 
             }
         });
         connection.release();
     });
-    console.log("nuploading post finishing_____________________________________________________________________________")
-})
+    })
 
 
 
@@ -766,7 +771,7 @@ app.post('/app/new_album', (req, res) => {
                     console.log('the sql album-creating request sendback:')
                     console.log(result);
                     console.log('album id:'+ id +  ", user_id: "+ user_id);
-
+                    console.log('creating album finishing____________________________________________________')
                 }
             }
         });
@@ -777,7 +782,7 @@ app.post('/app/new_album', (req, res) => {
     //console.log(result)
     // 返回JSON格式数据
     //res.json(result)
-    console.log('creating album finishing____________________________________________________')
+
 })
 
 
@@ -849,7 +854,7 @@ app.post('/app/load_home', (req, res) => {
     console.log('above is the load home infomation__');
 
 
-    let sql =`SELECT * FROM album_posts ORDER BY album_posts.id DESC`;
+    let sql =`SELECT * FROM album_posts WHERE status = '1' ORDER BY album_posts.id DESC`;
     console.log(sql)
     pool.getConnection(function(err, connection){
         connection.query(sql,function(err, rows){
